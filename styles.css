@@ -1,124 +1,201 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Recursos Pedagógicos</title>
-
-<link rel="stylesheet" href="styles.css">
-
-</head>
-
-<body>
-
-<header>
-
-<img src="logo.png" alt="Logo institucional" class="logo">
-
-<h1>Institución Educativa Manuel María Mosquera</h1>
-
-<h2>Puracé - Cauca</h2>
-
-<h3>Recursos pedagógicos para docentes</h3>
-
-<div class="menu">
-
-<a href="#orientaciones" class="glass-btn">Orientaciones</a>
-<a href="#documento" class="glass-btn">Documento</a>
-<a href="#video" class="glass-btn">Video</a>
-
-</div>
-
-</header>
+:root{
+--azul:#1c3f94;
+--verde:#2e8b57;
+}
 
 
-<main class="contenido">
-
-<div class="contenedor-doble">
-
-<section id="orientaciones" class="seccion">
-
-<h2>Orientaciones pedagógicas</h2>
-
-<p>
-
-El desarrollo de estrategias pedagógicas innovadoras permite fortalecer los procesos de enseñanza y aprendizaje dentro del aula. Los docentes desempeñan un papel fundamental como orientadores del conocimiento.
-
-</p>
-
-<p>
-
-La implementación de recursos didácticos y metodologías participativas contribuye a mejorar la comprensión de los contenidos académicos y facilita la construcción de aprendizajes significativos.
-
-</p>
-
-</section>
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 
-<section id="documento" class="seccion">
+/* BODY */
+body{
+font-family:Segoe UI, Arial, sans-serif;
+color:white;
 
-<h2>Documento informativo</h2>
+background:linear-gradient(135deg,#1c3f94,#2e8b57,#0f2027);
+background-size:300% 300%;
+animation:fondo 12s ease infinite;
+}
 
-<p>
-
-A continuación se presenta un documento de apoyo que puede servir como guía para fortalecer las prácticas pedagógicas.
-
-</p>
-
-<div class="pdf-container">
-
-<iframe src="documento.pdf"></iframe>
-
-</div>
-
-</section>
-
-</div>
+@keyframes fondo{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
 
 
-<section id="video" class="seccion">
-
-<h2>Video educativo</h2>
-
-<p>
-
-El siguiente recurso audiovisual presenta algunas reflexiones sobre la importancia de implementar estrategias educativas innovadoras.
-
-</p>
-
-<div class="video-container">
-
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-frameborder="0"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</section>
-
-</main>
+/* HEADER */
+.barra-superior{
+height:90px;
+background:linear-gradient(to right,#000,#111,#222);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
+}
 
 
-<footer>
+/* TITULO */
+.titulo-institucion{
+font-size:26px;
+font-weight:600;
+padding:10px 40px;
 
-<p>Institución Educativa Manuel María Mosquera - Puracé Cauca</p>
+background:linear-gradient(90deg,#020024,#1c3f94,#020024);
+border-radius:10px;
 
-<p>Trabajo académico - 2026</p>
+box-shadow:
+0 0 15px rgba(0,0,0,0.7),
+inset 0 0 10px rgba(255,255,255,0.1);
+}
 
-<p>Créditos: Grupo de trabajo</p>
 
-<br>
+/* LOGO */
+.logo{
+position:absolute;
+right:20px;
+top:50%;
+transform:translateY(-50%);
+height:60px;
+}
 
-<a href="https://iemmmrip.edu.co/index.php" class="boton-volver">
-Volver a la página principal
-</a>
 
-</footer>
+/* CONTENIDO */
+.contenido{
+max-width:1100px;
+margin:auto;
+padding:40px;
+}
 
-</body>
 
-</html>
+/* BOTONES */
+.contenedor-cuadros{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-bottom:60px;
+flex-wrap:wrap;
+}
+
+.glass-btn{
+width:230px;
+height:170px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+font-size:18px;
+font-weight:600;
+
+color:white;
+text-decoration:none;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,0.2);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.4),
+inset 0 0 15px rgba(255,255,255,0.1);
+
+transition:0.3s;
+}
+
+.glass-btn:hover{
+transform:translateY(-6px) scale(1.05);
+background:rgba(255,255,255,0.18);
+}
+
+
+/* CUADROS */
+.contenedor-doble{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.glass-box{
+flex:1;
+min-width:300px;
+
+padding:25px;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.2);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.glass-box h2{
+font-family:Georgia, serif;
+border-bottom:1px solid rgba(255,255,255,0.4);
+margin-bottom:10px;
+padding-bottom:5px;
+}
+
+
+/* PDF */
+.glass-box iframe{
+width:100%;
+height:350px;
+border:none;
+border-radius:10px;
+}
+
+
+/* VIDEO */
+.video{
+margin-top:60px;
+text-align:center;
+}
+
+.video iframe{
+width:100%;
+max-width:700px;
+height:380px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+
+/* FOOTER */
+footer{
+margin-top:60px;
+background:#0d0d0d;
+padding:30px;
+text-align:center;
+}
+
+
+/* BOTON */
+.btn-volver{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+
+background:linear-gradient(45deg,#2e8b57,#1c3f94);
+color:white;
+text-decoration:none;
+
+border-radius:8px;
+transition:0.3s;
+}
+
+.btn-volver:hover{
+transform:scale(1.05);
+}
