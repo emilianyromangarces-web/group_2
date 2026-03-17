@@ -1,9 +1,3 @@
-:root{
---azul:#1c3f94;
---verde:#2e8b57;
-}
-
-
 /* RESET */
 *{
 margin:0;
@@ -11,12 +5,12 @@ padding:0;
 box-sizing:border-box;
 }
 
-
 /* BODY */
 body{
 font-family:Segoe UI, Arial, sans-serif;
 color:white;
 
+/* FONDO DINÁMICO REAL */
 background:linear-gradient(135deg,#1c3f94,#2e8b57,#0f2027);
 background-size:300% 300%;
 animation:fondo 12s ease infinite;
@@ -32,11 +26,13 @@ animation:fondo 12s ease infinite;
 /* HEADER */
 .barra-superior{
 height:90px;
+
 background:linear-gradient(to right,#000,#111,#222);
+
 display:flex;
 align-items:center;
 justify-content:center;
-position:relative;
+
 box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
@@ -45,24 +41,16 @@ box-shadow:0 5px 20px rgba(0,0,0,0.6);
 .titulo-institucion{
 font-size:26px;
 font-weight:600;
-padding:10px 40px;
+
+padding:12px 40px;
 
 background:linear-gradient(90deg,#020024,#1c3f94,#020024);
+
 border-radius:10px;
 
 box-shadow:
 0 0 15px rgba(0,0,0,0.7),
 inset 0 0 10px rgba(255,255,255,0.1);
-}
-
-
-/* LOGO */
-.logo{
-position:absolute;
-right:20px;
-top:50%;
-transform:translateY(-50%);
-height:60px;
 }
 
 
@@ -149,30 +137,6 @@ padding-bottom:5px;
 }
 
 
-/* PDF */
-.glass-box iframe{
-width:100%;
-height:350px;
-border:none;
-border-radius:10px;
-}
-
-
-/* VIDEO */
-.video{
-margin-top:60px;
-text-align:center;
-}
-
-.video iframe{
-width:100%;
-max-width:700px;
-height:380px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
-}
-
-
 /* FOOTER */
 footer{
 margin-top:60px;
@@ -186,13 +150,16 @@ text-align:center;
 .btn-volver{
 display:inline-block;
 margin-top:15px;
+
 padding:10px 20px;
 
 background:linear-gradient(45deg,#2e8b57,#1c3f94);
+
 color:white;
 text-decoration:none;
 
 border-radius:8px;
+
 transition:0.3s;
 }
 
